@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<project name="GolfScript-Kolmogorov" default="compile">
+	<property name="main.class" value="org.cheddarmonk.compression.golfscript.Kolmogorov" />
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="build" />
+
+	<target name="compile" description="Compile all sources.">
+		<mkdir dir="${build.dir}" />
+		<javac srcdir="${src.dir}" destdir="${build.dir}" optimize="on" debug="on" deprecation="on" includeantruntime="no">
+			<compilerarg value="-Xlint" />
+		</javac>
+	</target>
+
+	<target name="clean" description="Delete all generated files.">
+		<delete dir="${build.dir}" />
+	</target>
+</project>
